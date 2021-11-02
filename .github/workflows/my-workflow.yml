@@ -12,3 +12,13 @@ jobs:
         uses: ./.github/actions/hello-world
         with:
           firstGreeting: "Learning Lab User"
+          
+          
+  job1:
+    name: 'Job 1'
+    runs-on: "ubuntu-latest"
+    container: 'bitnami/git:2.32.0'
+    steps:
+      - run: env
+
+      - run: echo Runner name is ${{ runner.name }}
